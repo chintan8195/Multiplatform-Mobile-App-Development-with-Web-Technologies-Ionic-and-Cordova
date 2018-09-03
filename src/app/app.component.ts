@@ -58,5 +58,5 @@ export class MyApp {
     let modal = this.modalCtrl.create(ReservationPage);
     modal.present();
   }
-  
+    
 }
