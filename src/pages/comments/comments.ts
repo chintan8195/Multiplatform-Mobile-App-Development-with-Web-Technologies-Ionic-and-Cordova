@@ -40,7 +40,7 @@ export class CommentsPage {
 
   onSubmit() {
     console.log(this.addComment.value);
-    this.viewCtrl.dismiss();
+    this.viewCtrl.dismiss(this.addComment.value);
   }
 
 }

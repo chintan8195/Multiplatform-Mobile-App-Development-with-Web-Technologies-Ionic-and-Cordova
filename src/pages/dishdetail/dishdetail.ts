@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController,ActionSheetController, ViewController } from 'ionic-angular';
 import { Dish } from '../../shared/dish';
+import {Comment} from '../../shared/comment'
 import { FavoriteProvider } from '../../providers/favorite/favorite';
 import { ModalController } from 'ionic-angular';
 
@@ -24,6 +25,7 @@ export class DishdetailPage {
   avgstars: string;
   favorite: boolean;
   numcomments: number;
+  comment:Comment;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     @Inject('BaseURL') private BaseURL,
@@ -35,7 +37,6 @@ export class DishdetailPage {
     this.dish = navParams.get('dish');
     this.favorite = favoriteservice.isFavorite(this.dish.id);
 
-    this.dish = navParams.get('dish');
     this.numcomments = this.dish.comments.length;
 
     let total = 0;
@@ -58,6 +59,12 @@ export class DishdetailPage {
   openComments() {
 
     let modal = this.modalCtrl.create(CommentsPage);
+    modal.onDidDismiss(data => {
+      this.comment = data ;
+      let d = new Date();
+      this.comment.date = d.toISOString();
+      this.dish.comments.push(this.comment);
+    })
     modal.present();
   }
 
