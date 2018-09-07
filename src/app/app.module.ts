@@ -14,6 +14,7 @@ import { FavoritesPage } from '../pages/favorites/favorites';
 import { ReservationPage } from '../pages/reservation/reservation';
 import { CommentsPage } from '../pages/comments/comments';
 import { LoginPage } from '../pages/login/login';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -69,7 +70,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     LeaderProvider,
     PromotionProvider,
     ProcessHttpmsgProvider,
-    FavoriteProvider
+    FavoriteProvider,
+    EmailComposer
   ]
 })
 export class AppModule {}
