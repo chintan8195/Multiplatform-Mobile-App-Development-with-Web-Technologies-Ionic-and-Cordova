@@ -18,6 +18,8 @@ import { RegisterPage } from '../pages/register/register';
 
 import { EmailComposer } from '@ionic-native/email-composer';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { Network } from '@ionic-native/network';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -78,7 +80,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     FavoriteProvider,
     EmailComposer,
     SocialSharing,
-    Camera
+    Camera,
+    Network
 
   ]
 })
