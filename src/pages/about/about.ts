@@ -1,4 +1,4 @@
-import { Component,OnInit,Inject } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LeaderProvider } from '../../providers/leader/leader';
 import {Leader} from '../../shared/leader'

@@ -14,15 +14,16 @@ import { FavoritesPage } from '../pages/favorites/favorites';
 import { ReservationPage } from '../pages/reservation/reservation';
 import { CommentsPage } from '../pages/comments/comments';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+
 import { EmailComposer } from '@ionic-native/email-composer';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
-
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { DishProvider } from '../providers/dish/dish';
+import { Camera } from '@ionic-native/camera';
 import { LeaderProvider } from '../providers/leader/leader';
 import { PromotionProvider } from '../providers/promotion/promotion';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
@@ -40,7 +41,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     FavoritesPage,
     ReservationPage,
     CommentsPage,
-    LoginPage  
+    LoginPage,
+    RegisterPage
 ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     FavoritesPage,
     ReservationPage,
     CommentsPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
  
   ],
   providers: [
@@ -74,7 +77,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     ProcessHttpmsgProvider,
     FavoriteProvider,
     EmailComposer,
-    SocialSharing
+    SocialSharing,
+    Camera
 
   ]
 })
